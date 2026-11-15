@@ -1,0 +1,35 @@
+use spectracore_data::block_properties::BlockProperties;
+use spectracore_data::{Block, FacingExt};
+use spectracore_macros::spectracore_block;
+use spectracore_world::world::BlockFlags;
+
+use crate::block::BrokenArgs;
+use crate::block::{BlockBehaviour, BlockFuture};
+
+use super::piston::PistonProps;
+
+pub(crate) type PistonHeadProperties = spectracore_data::block_properties::PistonHeadLikeProperties;
+
+#[spectracore_block("minecraft:piston_head")]
+pub struct PistonHeadBlock;
+
+impl BlockBehaviour for PistonHeadBlock {
+    fn broken<'a>(&'a self, args: BrokenArgs<'a>) -> BlockFuture<'a, ()> {
+        Box::pin(async move {
+            let props = PistonHeadProperties::from_state_id(args.state.id, &Block::PISTON_HEAD);
+            let pos = args
+                .position
+                .offset(props.facing.opposite().to_block_direction().to_offset());
+            let (new_block, new_state) = args.world.get_block_and_state_id(&pos).await;
+            if &Block::PISTON == new_block || &Block::STICKY_PISTON == new_block {
+                let props = PistonProps::from_state_id(new_state, new_block);
+                if props.extended {
+                    // TODO: use player
+                    args.world
+                        .break_block(&pos, None, BlockFlags::SKIP_DROPS)
+                        .await;
+                }
+            }
+        })
+    }
+}

@@ -1,0 +1,13 @@
+[package]
+name = "spectracore-registry"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+spectracore-protocol = { path = "../spectracore-protocol" }
+spectracore-util = { path = "../spectracore-util" }
+
+indexmap = { version = "2.12", features = ["serde"] }
+
+serde.workspace = true
+serde_json.workspace = true

@@ -2094,222 +2094,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "pumpkin"
-version = "0.1.0-dev+1.21.11"
-dependencies = [
- "base64 0.22.1",
- "bytes",
- "console-subscriber",
- "crossbeam",
- "flate2",
- "futures",
- "hmac 0.13.0-rc.3",
- "libloading",
- "log",
- "num-bigint",
- "pkcs8 0.11.0-rc.8",
- "pumpkin-config",
- "pumpkin-data",
- "pumpkin-inventory",
- "pumpkin-macros",
- "pumpkin-nbt",
- "pumpkin-protocol",
- "pumpkin-registry",
- "pumpkin-util",
- "pumpkin-world",
- "rand",
- "rsa",
- "rustc-hash",
- "rustyline-async",
- "serde",
- "serde_json",
- "sha1",
- "sha2 0.11.0-rc.3",
- "signature 2.2.0",
- "simplelog",
- "tempfile",
- "thiserror",
- "time",
- "tokio",
- "tokio-util",
- "ureq",
- "uuid",
-]
-
-[[package]]
-name = "pumpkin-api-macros"
-version = "0.1.0-dev+1.21.11"
-dependencies = [
- "proc-macro-error2",
- "proc-macro2",
- "quote",
- "syn",
-]
-
-[[package]]
-name = "pumpkin-config"
-version = "0.1.0-dev+1.21.11"
-dependencies = [
- "log",
- "pumpkin-util",
- "serde",
- "toml",
- "uuid",
-]
-
-[[package]]
-name = "pumpkin-data"
-version = "0.1.0-dev+1.21.11"
-dependencies = [
- "crc-fast",
- "heck",
- "phf",
- "proc-macro2",
- "pumpkin-nbt",
- "pumpkin-util",
- "quote",
- "rayon",
- "serde",
- "serde_json",
- "serde_json5",
- "syn",
-]
-
-[[package]]
-name = "pumpkin-inventory"
-version = "0.1.0-dev+1.21.11"
-dependencies = [
- "crossbeam-utils",
- "log",
- "pumpkin-data",
- "pumpkin-protocol",
- "pumpkin-util",
- "pumpkin-world",
- "thiserror",
- "tokio",
-]
-
-[[package]]
-name = "pumpkin-macros"
-version = "0.1.0-dev+1.21.11"
-dependencies = [
- "proc-macro-error2",
- "proc-macro2",
- "quote",
- "syn",
-]
-
-[[package]]
-name = "pumpkin-nbt"
-version = "0.1.0-dev+1.21.11"
-dependencies = [
- "bytes",
- "cesu8",
- "flate2",
- "serde",
- "tempfile",
- "thiserror",
-]
-
-[[package]]
-name = "pumpkin-protocol"
-version = "0.1.0-dev+1.21.11"
-dependencies = [
- "aes",
- "async-compression",
- "bitflags",
- "bytes",
- "cfb8",
- "flate2",
- "pumpkin-data",
- "pumpkin-macros",
- "pumpkin-nbt",
- "pumpkin-util",
- "pumpkin-world",
- "serde",
- "take_mut",
- "thiserror",
- "tokio",
- "uuid",
-]
-
-[[package]]
-name = "pumpkin-registry"
-version = "0.1.0-dev+1.21.11"
-dependencies = [
- "indexmap",
- "pumpkin-protocol",
- "pumpkin-util",
- "serde",
- "serde_json",
-]
-
-[[package]]
-name = "pumpkin-util"
-version = "0.1.0-dev+1.21.11"
-dependencies = [
- "base64 0.22.1",
- "bytes",
- "colored",
- "ecdsa",
- "enum_dispatch",
- "md5",
- "num-derive",
- "num-traits",
- "p384",
- "proc-macro2",
- "pumpkin-nbt",
- "quote",
- "serde",
- "serde_json",
- "syn",
- "thiserror",
- "tokio",
- "uuid",
-]
-
-[[package]]
-name = "pumpkin-world"
-version = "0.1.0-dev+1.21.11"
-dependencies = [
- "bitflags",
- "bytes",
- "criterion",
- "crossbeam",
- "crossfire",
- "dashmap",
- "enum_dispatch",
- "env_logger",
- "flate2",
- "futures",
- "itertools 0.14.0",
- "log",
- "lru",
- "lz4-java-wrc",
- "num-derive",
- "num-traits",
- "num_cpus",
- "pumpkin-config",
- "pumpkin-data",
- "pumpkin-nbt",
- "pumpkin-util",
- "rand",
- "rustc-hash",
- "ruzstd",
- "serde",
- "serde_json",
- "serde_json5",
- "sha2 0.10.9",
- "slotmap",
- "temp-dir",
- "thiserror",
- "thread_local",
- "tokio",
- "tokio-util",
- "uuid",
-]
-
-[[package]]
 name = "quote"
 version = "1.0.42"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2810,6 +2594,222 @@ checksum = "17129e116933cf371d018bb80ae557e889637989d8638274fb25622827b03881"
 dependencies = [
  "libc",
  "windows-sys 0.60.2",
+]
+
+[[package]]
+name = "spectracore"
+version = "0.1.0-dev+1.21.11"
+dependencies = [
+ "base64 0.22.1",
+ "bytes",
+ "console-subscriber",
+ "crossbeam",
+ "flate2",
+ "futures",
+ "hmac 0.13.0-rc.3",
+ "libloading",
+ "log",
+ "num-bigint",
+ "pkcs8 0.11.0-rc.8",
+ "rand",
+ "rsa",
+ "rustc-hash",
+ "rustyline-async",
+ "serde",
+ "serde_json",
+ "sha1",
+ "sha2 0.11.0-rc.3",
+ "signature 2.2.0",
+ "simplelog",
+ "spectracore-config",
+ "spectracore-data",
+ "spectracore-inventory",
+ "spectracore-macros",
+ "spectracore-nbt",
+ "spectracore-protocol",
+ "spectracore-registry",
+ "spectracore-util",
+ "spectracore-world",
+ "tempfile",
+ "thiserror",
+ "time",
+ "tokio",
+ "tokio-util",
+ "ureq",
+ "uuid",
+]
+
+[[package]]
+name = "spectracore-api-macros"
+version = "0.1.0-dev+1.21.11"
+dependencies = [
+ "proc-macro-error2",
+ "proc-macro2",
+ "quote",
+ "syn",
+]
+
+[[package]]
+name = "spectracore-config"
+version = "0.1.0-dev+1.21.11"
+dependencies = [
+ "log",
+ "serde",
+ "spectracore-util",
+ "toml",
+ "uuid",
+]
+
+[[package]]
+name = "spectracore-data"
+version = "0.1.0-dev+1.21.11"
+dependencies = [
+ "crc-fast",
+ "heck",
+ "phf",
+ "proc-macro2",
+ "quote",
+ "rayon",
+ "serde",
+ "serde_json",
+ "serde_json5",
+ "spectracore-nbt",
+ "spectracore-util",
+ "syn",
+]
+
+[[package]]
+name = "spectracore-inventory"
+version = "0.1.0-dev+1.21.11"
+dependencies = [
+ "crossbeam-utils",
+ "log",
+ "spectracore-data",
+ "spectracore-protocol",
+ "spectracore-util",
+ "spectracore-world",
+ "thiserror",
+ "tokio",
+]
+
+[[package]]
+name = "spectracore-macros"
+version = "0.1.0-dev+1.21.11"
+dependencies = [
+ "proc-macro-error2",
+ "proc-macro2",
+ "quote",
+ "syn",
+]
+
+[[package]]
+name = "spectracore-nbt"
+version = "0.1.0-dev+1.21.11"
+dependencies = [
+ "bytes",
+ "cesu8",
+ "flate2",
+ "serde",
+ "tempfile",
+ "thiserror",
+]
+
+[[package]]
+name = "spectracore-protocol"
+version = "0.1.0-dev+1.21.11"
+dependencies = [
+ "aes",
+ "async-compression",
+ "bitflags",
+ "bytes",
+ "cfb8",
+ "flate2",
+ "serde",
+ "spectracore-data",
+ "spectracore-macros",
+ "spectracore-nbt",
+ "spectracore-util",
+ "spectracore-world",
+ "take_mut",
+ "thiserror",
+ "tokio",
+ "uuid",
+]
+
+[[package]]
+name = "spectracore-registry"
+version = "0.1.0-dev+1.21.11"
+dependencies = [
+ "indexmap",
+ "serde",
+ "serde_json",
+ "spectracore-protocol",
+ "spectracore-util",
+]
+
+[[package]]
+name = "spectracore-util"
+version = "0.1.0-dev+1.21.11"
+dependencies = [
+ "base64 0.22.1",
+ "bytes",
+ "colored",
+ "ecdsa",
+ "enum_dispatch",
+ "md5",
+ "num-derive",
+ "num-traits",
+ "p384",
+ "proc-macro2",
+ "quote",
+ "serde",
+ "serde_json",
+ "spectracore-nbt",
+ "syn",
+ "thiserror",
+ "tokio",
+ "uuid",
+]
+
+[[package]]
+name = "spectracore-world"
+version = "0.1.0-dev+1.21.11"
+dependencies = [
+ "bitflags",
+ "bytes",
+ "criterion",
+ "crossbeam",
+ "crossfire",
+ "dashmap",
+ "enum_dispatch",
+ "env_logger",
+ "flate2",
+ "futures",
+ "itertools 0.14.0",
+ "log",
+ "lru",
+ "lz4-java-wrc",
+ "num-derive",
+ "num-traits",
+ "num_cpus",
+ "rand",
+ "rustc-hash",
+ "ruzstd",
+ "serde",
+ "serde_json",
+ "serde_json5",
+ "sha2 0.10.9",
+ "slotmap",
+ "spectracore-config",
+ "spectracore-data",
+ "spectracore-nbt",
+ "spectracore-util",
+ "temp-dir",
+ "thiserror",
+ "thread_local",
+ "tokio",
+ "tokio-util",
+ "uuid",
 ]
 
 [[package]]

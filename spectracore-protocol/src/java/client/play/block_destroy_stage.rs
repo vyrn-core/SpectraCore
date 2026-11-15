@@ -1,0 +1,25 @@
+use spectracore_data::packet::clientbound::PLAY_BLOCK_DESTRUCTION;
+use spectracore_util::math::position::BlockPos;
+
+use spectracore_macros::packet;
+use serde::Serialize;
+
+use crate::VarInt;
+
+#[derive(Serialize)]
+#[packet(PLAY_BLOCK_DESTRUCTION)]
+pub struct CSetBlockDestroyStage {
+    pub entity_id: VarInt,
+    pub location: BlockPos,
+    pub destroy_stage: i8,
+}
+
+impl CSetBlockDestroyStage {
+    pub fn new(entity_id: VarInt, location: BlockPos, destroy_stage: i8) -> Self {
+        Self {
+            entity_id,
+            location,
+            destroy_stage,
+        }
+    }
+}

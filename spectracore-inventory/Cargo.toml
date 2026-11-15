@@ -1,0 +1,18 @@
+[package]
+name = "spectracore-inventory"
+version.workspace = true
+edition.workspace = true
+rust-version = "1.87"
+
+[dependencies]
+spectracore-protocol = { path = "../spectracore-protocol" }
+spectracore-data = { path = "../spectracore-data" }
+
+spectracore-world = { path = "../spectracore-world" }
+spectracore-util = { path = "../spectracore-util" }
+
+log.workspace = true
+tokio.workspace = true
+thiserror.workspace = true
+crossbeam-utils = "0.8.21"
+

@@ -1,0 +1,15 @@
+use spectracore_macros::spectracore_block;
+
+use crate::block::{BlockBehaviour, BlockFuture, EmitsRedstonePowerArgs};
+
+#[spectracore_block("minecraft:target")]
+pub struct TargetBlock;
+
+impl BlockBehaviour for TargetBlock {
+    fn emits_redstone_power<'a>(
+        &'a self,
+        _args: EmitsRedstonePowerArgs<'a>,
+    ) -> BlockFuture<'a, bool> {
+        Box::pin(async move { true })
+    }
+}

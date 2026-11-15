@@ -1,0 +1,37 @@
+[package]
+name = "spectracore-protocol"
+version.workspace = true
+edition.workspace = true
+
+[features]
+default = ["query"]
+serverbound = []
+clientbound = []
+query = []
+
+[dependencies]
+spectracore-nbt = { path = "../spectracore-nbt" }
+spectracore-data = { path = "../spectracore-data" }
+spectracore-macros = { path = "../spectracore-macros" }
+spectracore-world = { path = "../spectracore-world" }
+spectracore-util = { path = "../spectracore-util" }
+
+uuid.workspace = true
+serde.workspace = true
+thiserror.workspace = true
+tokio.workspace = true
+bytes.workspace = true
+
+# encryption
+aes = "0.8"
+cfb8 = "0.8"
+
+# compression
+async-compression = { version = "0.4.36", features = ["tokio", "zlib"] }
+
+take_mut = "0.2.2"
+bitflags = "2.10.0"
+
+[dev-dependencies]
+# Validate correctness
+flate2 = "1.1.5"
