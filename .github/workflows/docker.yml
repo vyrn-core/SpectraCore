@@ -38,7 +38,7 @@ jobs:
 
       - name: Login to GitHub CR
         if: steps.repo_check.outputs.should_deploy == 'true'
-        uses: docker/login-action@v3
+        uses: docker/login-action@v4
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.repository_owner }}
